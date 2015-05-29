@@ -1,5 +1,7 @@
 require 'minitest/autorun'
 require './meme.rb'
+require './basic_ruby.rb'
+
 
 class TestMeme < Minitest::Test
   def setup
@@ -17,4 +19,9 @@ class TestMeme < Minitest::Test
   def test_that_will_be_skipped
     skip "test this later"
   end
+
+  def test_add
+    assert_equal 2, add(1,1)
+  end
+
 end
